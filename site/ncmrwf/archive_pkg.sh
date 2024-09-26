@@ -1,9 +1,11 @@
 #!/bin/bash
 SELF=$(realpath ${0})
 export SITEFLDR=${SELF%/*}
-export SITENAME=${SITEFLDR##*/}
+export SITENAME=${SITEFLDR##*/site/}
 export GITROOT=${SELF%/site/*}
 export PKG_NAME=${GITROOT##*/}
+
+echo ${SITENAME}
 
 ###########################################################################################
 helpdesk()
